@@ -1,0 +1,134 @@
+library(usethis)
+library(blogdown)
+install_hugo()
+create_project('blog')
+# 1
+25+99
+# 1
+a <- 25+99
+b <- 456-123
+c <- 2*(3+4)
+d <- (3+5*6)%%7
+d <- (3+5*6)%7
+iris
+library(dplyr)
+A <- filter(iris, iris$Sepal.Length>4)
+A
+A <- iris %>%
+group_by(iris$Species == "setosa") %>%
+summarise(mean_SP_L = mean(Sepal.Length),
+mean_SP_W = mean(Sepal.Width))
+A
+# %>% 파이프라인 함수라고도 함
+library(koweps)
+# %>% 파이프라인 함수라고도 함
+install.packages("koweps")
+library(koweps)
+# %>% 파이프라인 함수라고도 함
+library(remotes)
+remotes::install_github("youngwoos/koweps")
+library(koweps)
+View(koweps)
+library(koweps)
+View(koweps)
+View('koweps')
+str(koweps)
+str(welfare)
+View(welfare)
+View(welfare)
+library(dplyr)
+A <- welfare %>%
+select(h12_g3,h12_pers_income1)
+A
+head(welfare)
+View(welfare)
+A <- welfare %>%
+select(h12_g3,h12_g4)
+A
+setwd("C:/Users/ycg00/Desktop/2019-1/데이터마이닝/데이터셋")
+mower.df <- read.csv("RidingMowers.csv")
+mower.df=mower.df[,1:3]
+# 데이터 분할(Data Partitioning)
+set.seed(111)
+train.index <- sample(row.names(mower.df), 0.6*dim(mower.df)[1])
+valid.index <- setdiff(row.names(mower.df), train.index)
+train.df <- mower.df[train.index, ]
+## new household
+new.df <- data.frame(Income = 60, Lot_Size = 20)
+plot(Lot_Size ~ Income, data=train.df, pch=ifelse(train.df$Ownership=="owner", 1, 3))
+text(train.df$Income, train.df$Lot_Size, rownames(train.df), pos=4)
+text(60, 20, "X") # text 함수는 매우 편리, 첫번째는 x축값, 두 번쩨는 y축
+text(train.df$Income, train.df$Lot_Size, rownames(train.df), pos=3)
+text(train.df$Income, train.df$Lot_Size, rownames(train.df), pos=1)
+text(train.df$Income, train.df$Lot_Size, rownames(train.df), pos=2)
+legend("topright", c("owner", "non-owner", "newhousehold"), pch = c(1, 3, 4))
+install.packages("data.table", type = "binary")
+install.packages(pkgs = "caret", dependencies = c("Depends", "Imports"))
+library(caret)
+train.norm.df <- train.df
+valid.norm.df <- valid.df
+mower.norm.df <- mower.df
+new.norm.df <- new.df
+a<-sapply(train.df[,1:2],mean);b<-sapply(train.df[,1:2],sd)
+income.ftn<- function(x) { (x - a[1]) / b[1] }
+size.ftn<-function(x) { (x - a[2]) / b[2] }
+train.norm.df[,1]<-income.ftn(train.df[,1]); train.norm.df[,2]<-size.ftn(train.df[,2]);
+valid.norm.df[,1]<-income.ftn(valid.df[,1]); valid.norm.df[,2]<-size.ftn(valid.df[,2]);
+mower.norm.df[,1]<-income.ftn(mower.df[,1]); mower.df[,2]<-size.ftn(mower.df[,2]);
+new.norm.df[,1] <-income.ftn(new.df[,1]);    new.norm.df[,2] <-size.ftn(new.df[,2]);
+mower.df <- read.csv("RidingMowers.csv")
+mower.df=mower.df[,1:3]
+set.seed(111)
+train.index <- sample(row.names(mower.df), 0.6*dim(mower.df)[1])
+valid.index <- setdiff(row.names(mower.df), train.index)
+train.df <- mower.df[train.index, ]  # 학습용 데이터
+valid.df <- mower.df[valid.index, ]  # 검증용 데이터
+## new household
+new.df <- data.frame(Income = 60, Lot_Size = 20)
+plot(Lot_Size ~ Income, data=train.df, pch=ifelse(train.df$Ownership=="owner", 1, 3)) # y축 ~ x축 # pch는 범주형 변수의 마크를 바꾸기 위한 것
+# initialize normalized training, validation data, complete data frames to originals
+train.norm.df <- train.df
+valid.norm.df <- valid.df
+mower.norm.df <- mower.df
+new.norm.df <- new.df
+library(caret)
+a<-sapply(train.df[,1:2],mean)
+a
+b<-sapply(train.df[,1:2],sd)
+b
+income.ftn <- function(x) { (x - a[1]) / b[1] }
+size.ftn<-function(x) { (x - a[2]) / b[2] }
+train.norm.df[,1]<-income.ftn(train.df[,1])
+train.norm.df
+train.norm.df[,2]<-size.ftn(train.df[,2]);
+train.norm.df
+train.norm.df[,1]<-income.ftn(train.df[,1]); train.norm.df[,2]<-size.ftn(train.df[,2]);
+valid.norm.df[,1]<-income.ftn(valid.df[,1]); valid.norm.df[,2]<-size.ftn(valid.df[,2]);
+mower.norm.df[,1]<-income.ftn(mower.df[,1]); mower.df[,2]<-size.ftn(mower.df[,2]);
+new.norm.df[,1] <-income.ftn(new.df[,1]);    new.norm.df[,2] <-size.ftn(new.df[,2]);
+## scatter plot (p193) # EDA를 해야 한다.
+plot(Lot_Size ~ Income, data=train.df, pch=ifelse(train.df$Ownership=="owner", 1, 3)) # y축 ~ x축 # pch는 범주형 변수의 마크를 바꾸기 위한 것
+# owner 라는 값은 1번 pch로, 아닌 건 3번으로.
+plot(train.norm.df ~ Income, data=train.df, pch=ifelse(train.df$Ownership=="owner", 1, 3)) # y축 ~ x축 # pch는 범주형 변수의 마크를 바꾸기 위한 것
+plot(Lot_Size ~ Income, data=train.norm.df, pch=ifelse(train.df$Ownership=="owner", 1, 3))
+text(train.df$Income, train.df$Lot_Size, rownames(train.norm.df), pos=2)
+text(60, 20, "X") # text 함수는 매우 편리, 첫번째는 x축값, 두 번쩨는 y축
+library(FNN)
+install.packages("FNN")
+library(FNN)
+nn <- knn(train = train.norm.df[ ,1:2], test=new.norm.df, cl=train.norm.df[ ,3], k = 3)
+nn
+train.norm.df
+row.names(train.df)[attr(nn, "nn.index")]
+text(train.df$Income, train.df$Lot_Size, rownames(train.norm.df), pos=2)
+text(60, 20, "X") # text 함수는 매우 편리, 첫번째는 x축값, 두 번쩨는 y축
+accuracy1=rep(0,14)  # 학습데이터에서 계산
+accuracy2=rep(0,14)  # 검증데이터에서 계산
+for (i in 1:14){
+knn.pred1 = knn(train=train.norm.df[ ,1:2],test=train.norm.df[ ,1:2],cl=train.norm.df[ ,3],k=i)
+knn.pred2 = knn(train=train.norm.df[ ,1:2],test=valid.norm.df[ ,1:2],cl=train.norm.df[ ,3],k=i)
+accuracy1[i]=mean(as.character(knn.pred1)==train.norm.df[ ,3])
+accuracy2[i]=mean(as.character(knn.pred2)==valid.norm.df[ ,3])
+}
+plot(1:14, accuracy1, type = 'l')  # 학습데이터에서의 정확도
+points(1:14, accuracy2, type='b',col="blue") # 검정데이터에서의 정확도

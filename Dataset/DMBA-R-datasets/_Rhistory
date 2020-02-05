@@ -1,0 +1,78 @@
+library(usethis)
+library(blogdown)
+install_hugo()
+create_project('blog')
+# 1
+25+99
+# 1
+a <- 25+99
+b <- 456-123
+c <- 2*(3+4)
+d <- (3+5*6)%%7
+d <- (3+5*6)%7
+iris
+library(dplyr)
+A <- filter(iris, iris$Sepal.Length>4)
+A
+A <- iris %>%
+group_by(iris$Species == "setosa") %>%
+summarise(mean_SP_L = mean(Sepal.Length),
+mean_SP_W = mean(Sepal.Width))
+A
+# %>% 파이프라인 함수라고도 함
+library(koweps)
+# %>% 파이프라인 함수라고도 함
+install.packages("koweps")
+library(koweps)
+# %>% 파이프라인 함수라고도 함
+library(remotes)
+remotes::install_github("youngwoos/koweps")
+library(koweps)
+View(koweps)
+library(koweps)
+View(koweps)
+View('koweps')
+str(koweps)
+str(welfare)
+View(welfare)
+View(welfare)
+library(dplyr)
+A <- welfare %>%
+select(h12_g3,h12_pers_income1)
+A
+head(welfare)
+View(welfare)
+A <- welfare %>%
+select(h12_g3,h12_g4)
+A
+A <- c(58.9,37.8,34.0)
+library(ggplot2)
+install.packages("treemap")
+data(GNI2014)
+library(treemap)
+data(GNI2014)
+str(GNI2014)
+view(GNI2014)
+View(GNI2014)
+hospital <- read.csv("hospital.csv")
+library(ggplot2)
+ggplot(data = iris, aes(x = iris$Petal.Length, y = iris$Petal.Width))+
+geom_point()
+ggplot()+
+geom_point(x = iris$Sepal.Length, y = iris$Petal.Width)
+ggplot()+
+geom_point(data = iris, aes(x = iris$Sepal.Length, y = iris$Petal.Width))
+library(rpart)
+library(rpart.plot)
+install.packages("rpart")
+install.packages("rpart.plot")
+library(rpart.plot)
+setwd("C:/Users/ycg00/Desktop/2019-1/데이터마이닝/Dataset/DMBA-R-datasets")
+mower.df <- read.csv("RidingMowers.csv")
+class.tree <- rpart(Ownership ~., data = mower.df,
+control = rpart.control(maxdepth = 1), method = "class")
+class.tree <- rpart(Ownership ~., data = mower.df, method = "class")
+class.tree
+class.tree <- rpart(Ownership ~., data = mower.df,
+control = rpart.control(maxdepth = 1), method = "class")
+class.tree
