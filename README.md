@@ -5,9 +5,9 @@
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-국회의원들의 발언 데이터를 모으기 위해 '국회회의록'에서 회의록 문서를 다운로드 합니다. 특정 기간, 주제와 관련할수록 해당 문서들만 가져옵니다. 문서들을 전처리 후, 정당 별로 발언 데이터를 분류합니다. 이후, 형태소 분석기로 발언 내용들을 분절합니다. 전처리 작업을 다 마무리한 뒤, DTM(Document Terms Matrix)로 텍스트데이터를 구성합니다. 마지막으로 모델링 작업을 통해 정당 분류기를 만듭니다.
+Galit Shmueli, Peter C. Bruce 등이 쓴 'Datamining for Business Analytics'입니다. 2019년 데이터마이닝 수업을 들으며 작성한 코드와 과제를 업로드 합니다.
 
-![](C:\\Users\\ycg00\\Documents\\datamining_business_analytics_solution\\datamining-for-business-analytics-solution\\Datamining.png)
+![](C:\\Users\\ycg00\\Documents\\datamining-for-business-analytics-solution\\Datamining.png)
 
 ## 설치 방법
 
