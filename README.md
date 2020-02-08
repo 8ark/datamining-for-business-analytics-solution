@@ -4,7 +4,11 @@
 
 Galit Shmueli, Peter C. Bruce 등이 쓴 'Datamining for Business Analytics'입니다. 2019년 데이터마이닝 수업을 들으며 작성한 코드와 과제를 업로드 합니다.
 
+<<<<<<< HEAD
 ![](C:\\Users\\ycg00\\Documents\\datamining-for-business-analytics-solution\\image\\Datamining.png)
+=======
+![](Datamining.png)
+>>>>>>> 04914a671dd704e789bb36cbcb7255b85c101774
 
 
 ## documents
