@@ -1,78 +1,35 @@
 # Datamining for Business Anaytics - R edition
-> 데이터마이닝 교재 내용 솔루션
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+## 데이터마이닝 교재 내용 솔루션
 
 Galit Shmueli, Peter C. Bruce 등이 쓴 'Datamining for Business Analytics'입니다. 2019년 데이터마이닝 수업을 들으며 작성한 코드와 과제를 업로드 합니다.
 
-![](C:\\Users\\ycg00\\Documents\\datamining-for-business-analytics-solution\\Datamining.png)
+![](C:\\Users\\ycg00\\Documents\\datamining-for-business-analytics-solution\\image\\Datamining.png)
 
-## 설치 방법
 
-OS X & 리눅스:
+## documents
 
-```sh
-npm install my-crazy-module --save
-```
+해당 교재를 통해 작성한 과제물을 업로드
+ 
+ ### 예시 3.4
+ 
+![](C:\\Users\\ycg00\\Documents\\datamining-for-business-analytics-solution\\image\\이미지1.png)
+> 위 그림을 보면 configuration ~ Retail.Price 가 Configuration의 증가에 맞게 Retail.Price가 증가하는 비례관계임을 알 수 있다. 이 형태를 좀 더 명확하게 보기 위해 회귀선을 부여했다. 회귀선을 부여한 결과, 두 변수의 상관관계를 더 강하게 볼 수 있었다. 노트북의 판매가는 쪼개진 6개의 집단의 구간으로 추정할 수 있다.
 
-윈도우:
+![](C:\\Users\\ycg00\\Documents\\datamining-for-business-analytics-solution\\image\\이미지2.png)
+> 위 그림은 월별-판매가의 자료 그래프다. 해당 노트북 가격의 누적량을 통해 연초가 연말보다 더 높은 가격을 형성한다고 볼 수 있다. 10월과 12월 사이의 노트북 판매가격은 급격하게 하락한다. 10월과 12월 사이에 추수감사절, 크리스마스 등의 이벤트가 영향을 끼친 것인지 조심스럽게 추측해본다.
+>
+>요일 데이터의 경우, 1월부터 9월까지는 요일 간 판매가격에 차이가 보이지 않는다. 그러나 10월부터 12월 사이의 데이터에는 유의미한 변화가 보인다. 10월 (금, 토, 일), 11월(월, 화, 수), 12월(수, 목, 금) 판매가가 타 요일에 비해 상대적으로 저렴하다. ‘런던 컴퓨터’가 월마다 해당 요일에 행사를 열었을 거라 생각해본다.
 
-```sh
-edit autoexec.bat
-```
+![](C:\\Users\\ycg00\\Documents\\datamining-for-business-analytics-solution\\image\\이미지3.png)
+> 분기별 데이터의 경우, 1, 2, 3분기에 비해 4분기 판매량이 급격히 하락했다. 월별 데이터로 파악한 결과, 10, 11, 12월의 매출 하락이 동일한 결과로 나타났다고 본다. 해당 시기의 요일 데이터는 4분기 요일(수,금)이 타 요일에 비해 판매량이 부진한 것을 제외하고는 유의미한 차이가 보이지 않았다.
 
-## 사용 예제
 
-스크린 샷과 코드 예제를 통해 사용 방법을 자세히 설명합니다.
+## R code
 
-_더 많은 예제와 사용법은 [Wiki][wiki]를 참고하세요._
+해당 교재를 통해 작성한 코드를 업로드
 
-## 개발 환경 설정
 
-모든 개발 의존성 설치 방법과 자동 테스트 슈트 실행 방법을 운영체제 별로 작성합니다.
+## Dataset
 
-```sh
-make install
-npm test
-```
-
-## 업데이트 내역
-
-* 0.2.1
-    * 수정: 문서 업데이트 (모듈 코드 동일)
-* 0.2.0
-    * 수정: `setDefaultXYZ()` 메서드 제거
-    * 추가: `init()` 메서드 추가
-* 0.1.1
-    * 버그 수정: `baz()` 메서드 호출 시 부팅되지 않는 현상 (@컨트리뷰터 감사합니다!)
-* 0.1.0
-    * 첫 출시
-    * 수정: `foo()` 메서드 네이밍을 `bar()`로 수정
-* 0.0.1
-    * 작업 진행 중
-
-## 정보
-
-이름 – [@트위터 주소](https://twitter.com/dbader_org) – 이메일주소@example.com
-
-XYZ 라이센스를 준수하며 ``LICENSE``에서 자세한 정보를 확인할 수 있습니다.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
-
-## 기여 방법
-
-1. (<https://github.com/yourname/yourproject/fork>)을 포크합니다.
-2. (`git checkout -b feature/fooBar`) 명령어로 새 브랜치를 만드세요.
-3. (`git commit -am 'Add some fooBar'`) 명령어로 커밋하세요.
-4. (`git push origin feature/fooBar`) 명령어로 브랜치에 푸시하세요. 
-5. 풀리퀘스트를 보내주세요.
-
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
+'Datamining for Business Analytics(in R edition)'에서 제공한 데이터셋을 다운로드. 일부 데이터는 직접 다운로드도 해야함
